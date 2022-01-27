@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppies!</title>
+</head>
+<body>
+
+    <h1>Hi, take a look at all of our puppies!</h1>
+    <table>
+
+        <thead>
+
+            <th>Name</th>
+            <th>Breed</th>
+
+        </thead>
+
+        <tbody>
+
+        <% for( let i = 0; i < puppies.length; i++ ) { %>
+            <tr>
+                
+                <td>
+                    <%= puppies[i].name %>
+                </td>
+                <td>
+                    <%= puppies[i].breed %>
+                </td>
+
+            </tr>
+            <% } %>
+        </tbody>
+
+        </table>
+            
+    <h1>Wanna add your own puppy?</h1>
+    <form action="/new-dog" method="post" >
+
+        <label>
+            What's the name of your puppy?
+        </label>
+        <br />
+        <input name="name" placeholder="max" />
+        <br />
+        
+        <label>
+            What's the breed of your puppy?
+        </label>
+        <br />
+        <input name="breed" placeholder="bulldog" />
+        <br />
+
+        <button type="submit">
+            Add dog
+        </button>
+    </form>
+
+</body>
+</html>
